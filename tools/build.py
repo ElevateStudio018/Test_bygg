@@ -279,8 +279,9 @@ PAGES = {}
 
 PAGES["index.html"] = ("Ullevi El – elektriker och svagström i Göteborg & Landvetter",
 "Ullevi El & Svagströmsmontage AB i Landvetter utför elinstallationer, svagström, belysning och badrumsrenoveringar i Göteborg med omnejd.",
-f'''  <section class="hero bg-navy">
-    <div class="container narrow">
+f'''  <section class="hero-image">
+    <img class="cover" src="@/assets/img/elektriker-elcentral.webp" alt="Elektriker arbetar i en elcentral">
+    <div class="container hero-image-content">
       <h1><span class="color-primary">Ullevi El installerar el och svagström med kvalité. </span>Till rätt pris, i rätt tid – i hem, företag och offentliga miljöer.</h1>
       <p class="buttons">
         <a class="button-lg" href="@/tjanster/">Våra tjänster</a>
@@ -289,14 +290,19 @@ f'''  <section class="hero bg-navy">
     </div>
   </section>
 
-  <section class="image-block bg-dark">
-    <img class="cover" src="@/assets/img/elektriker-elcentral.webp" alt="Elektriker arbetar i en elcentral" style="object-position:50% 40%">
-    <div class="container narrow image-block-content">
-      <p class="txt-h2"><strong>Behöver du en elektriker som kommer när den sagt?</strong> Ring oss eller skicka en förfrågan – du får en offert utan att behöva vänta.</p>
-      <p class="buttons">
-        <a class="button-lg bg-white" href="{PHONE_HREF}">Ring {PHONE}</a>
-        <a class="link" href="@/kontakt/">Kontakta oss</a>
-      </p>
+  <section class="contact-band bg-sand">
+    <div class="container contact-band-inner">
+      <div class="contact-band-text">
+        <p class="eyebrow eyebrow-dark">Kontakta oss</p>
+        <h2>Behöver du en elektriker som kommer när den sagt?</h2>
+        <p class="txt-lg">Ring, mejla eller skicka en förfrågan – du får en offert utan att behöva vänta.</p>
+        <p class="buttons"><a class="button-lg bg-navy" href="@/kontakt/#offert">Begär offert</a></p>
+      </div>
+      <ul class="contact-tiles">
+        <li><a href="{PHONE_HREF}"><span class="tile-label">Ring oss</span><span class="tile-value">{PHONE}</span></a></li>
+        <li><a href="mailto:{EMAIL}"><span class="tile-label">Mejla oss</span><span class="tile-value">{EMAIL}</span></a></li>
+        <li><a href="@/om-oss/arbetsomrade/"><span class="tile-label">Vi finns i</span><span class="tile-value">Landvetter &amp; hela Göteborgsregionen</span></a></li>
+      </ul>
     </div>
   </section>
 
