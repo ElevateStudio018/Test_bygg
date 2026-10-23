@@ -409,3 +409,20 @@ a:focus-visible, button:focus-visible { outline: 3px solid var(--primary); outli
   .hero-image { min-height: 600px; }
   .hero-image .cover { object-position: 70% 30%; }
 }
+
+/* ---------- Stora skärmar: håll innehållet inom en maxbredd ---------- */
+:root { --content-max: 1360px; --px-wide: max(var(--px), calc((100% - var(--content-max)) / 2)); }
+.container, .site-header, .hero { padding-left: var(--px-wide); padding-right: var(--px-wide); }
+.submenu { padding-left: max(var(--px), calc((100vw - var(--content-max)) / 2)); padding-right: max(var(--px), calc((100vw - var(--content-max)) / 2)); }
+.split-img img { max-height: 620px; }
+.split-text { padding-block: 3rem; }
+.image-block.boxed { min-height: clamp(340px, 30vw, 520px); }
+.cards-home .card-img { aspect-ratio: 4 / 5; }
+.wide-img img { max-height: 520px; }
+@media (min-width: 1600px) {
+  .split { grid-template-columns: 1fr 1fr; }
+  .split-text > div { max-width: 32rem; }
+}
+@media (max-width: 1023px) {
+  .cards-home .card-img { aspect-ratio: 1; }
+}

@@ -312,11 +312,11 @@ f'''  <section class="hero-image">
     </div>
   </section>
 
-  <section class="container cards">
-    <a href="@/tjanster/elinstallation/" class="card"><span>Elinstallation</span></a>
-    <a href="@/tjanster/svagstrom/" class="card"><span>Svagström</span></a>
-    <a href="@/tjanster/badrumsrenovering/" class="card"><span>Badrums&shy;renovering</span></a>
-    <a href="@/tjanster/belysning/" class="card"><span>Belysning</span></a>
+  <section class="container cards cards-home">
+    <a href="@/tjanster/elinstallation/" class="card card-img"><img src="@/assets/img/elektriker-skap.webp" alt="" loading="lazy"><span>Elinstallation</span></a>
+    <a href="@/tjanster/svagstrom/" class="card card-img"><img src="@/assets/img/natverk-patch.webp" alt="" loading="lazy"><span>Svagström</span></a>
+    <a href="@/tjanster/badrumsrenovering/" class="card card-img"><img src="@/assets/img/badrum-dusch.webp" alt="" loading="lazy"><span>Badrums&shy;renovering</span></a>
+    <a href="@/tjanster/belysning/" class="card card-img"><img src="@/assets/img/kok-ljust.webp" alt="" loading="lazy"><span>Belysning</span></a>
   </section>
 
   <section class="container intro">
