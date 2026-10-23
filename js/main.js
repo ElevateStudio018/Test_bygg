@@ -57,10 +57,28 @@
     body.classList.remove('nav-open');
   });
 
-  // Reuse the header logo in the footer
-  const footerLogo = document.querySelector('.logo-footer');
-  const mark = document.querySelector('.site-header .logo .wordmark');
-  if (footerLogo && mark) footerLogo.appendChild(mark.cloneNode(true));
+  // Offertformulär: bygg ett färdigt mejl eftersom sajten saknar server
+  const form = document.querySelector('.quote-form');
+  if (form) {
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const data = new FormData(form);
+      const subject = `Offertförfrågan: ${data.get('tjanst')} – ${data.get('namn')}`;
+      const body = [
+        `Namn: ${data.get('namn')}`,
+        `Telefon: ${data.get('telefon') || '-'}`,
+        `E-post: ${data.get('epost')}`,
+        `Ort: ${data.get('ort') || '-'}`,
+        `Tjänst: ${data.get('tjanst')}`,
+        '',
+        data.get('meddelande'),
+      ].join('\n');
+      const note = form.querySelector('.form-note');
+      note.hidden = false;
+      note.textContent = `Ditt e-postprogram öppnas med förfrågan ifylld. Öppnas inget? Mejla oss på ${form.dataset.email}.`;
+      window.location.href = `mailto:${form.dataset.email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    });
+  }
 
   document.getElementById('year').textContent = new Date().getFullYear();
 })();
