@@ -5,9 +5,15 @@ Varje sida definieras i PAGES nedan. Header och footer är gemensamma och alla
 länkar görs relativa så att sajten fungerar både lokalt och på GitHub Pages.
 Skriv länkar i innehållet som "@/sökväg/" så räknas de om per sida.
 """
+import hashlib
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
+
+
+def asset_version(rel):
+    """Kort hash av filens innehåll – tvingar webbläsaren att hämta nya CSS/JS efter ändringar."""
+    return hashlib.sha1((ROOT / rel).read_bytes()).hexdigest()[:8]
 
 COMPANY = "Ullevi El & Svagströmsmontage AB"
 PHONE = "073-364 51 00"
@@ -168,7 +174,7 @@ def layout(title, description, body):
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Rethink+Sans:wght@400;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="@/css/style.css">
+  <link rel="stylesheet" href="@/css/style.css?v={asset_version('css/style.css')}">
 </head>
 <body>
 
@@ -180,7 +186,7 @@ def layout(title, description, body):
 
 {footer()}
 
-<script src="@/js/main.js"></script>
+<script src="@/js/main.js?v={asset_version('js/main.js')}"></script>
 </body>
 </html>
 '''
