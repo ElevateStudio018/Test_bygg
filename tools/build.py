@@ -173,7 +173,7 @@ def layout(title, description, body):
   <link rel="icon" href="@/assets/icons/favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Rethink+Sans:wght@400;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="@/css/style.css?v={asset_version('css/style.css')}">
 </head>
 <body>
@@ -319,23 +319,31 @@ f'''  <section class="hero-image">
     <a href="@/tjanster/belysning/" class="card card-img"><img src="@/assets/img/kok-ljust.webp" alt="" loading="lazy"><span>Belysning</span></a>
   </section>
 
-  <section class="container intro">
-    <h2>Elfirma i Landvetter för hela Göteborgsregionen</h2>
-    <div class="cols-3">
-      <div>
-        <h3>El och svagström</h3>
-        <p>Vi utför elinstallationer i bostäder, lokaler och offentliga miljöer – från nya uttag och elcentraler till larm, nätverk och annan svagström. Arbetet görs med aktuellt material och modern teknik.</p>
-        <p><a class="link" href="@/tjanster/">Våra tjänster</a></p>
+  <section class="features">
+    <div class="container">
+      <div class="features-head">
+        <p class="eyebrow eyebrow-dark">Därför Ullevi El</p>
+        <h2>Elfirma i Landvetter för hela Göteborgsregionen</h2>
       </div>
-      <div>
-        <h3>Renovering med el på köpet</h3>
-        <p>Vi renoverar badrum och kök med egna elektriker. Våra elektriker har våtrumscertifikat, så el, belysning och golvvärme blir rätt från början – i samma projekt.</p>
-        <p><a class="link" href="@/tjanster/badrumsrenovering/">Badrumsrenovering</a></p>
-      </div>
-      <div>
-        <h3>Behörig elfirma</h3>
-        <p>{COMPANY} är registrerat hos Elsäkerhetsverket med behörigheter för bland annat bostäder, allmänna och offentliga utrymmen, elnät och elproduktionsanläggningar.</p>
-        <p><a class="link" href="@/om-oss/behorigheter/">Behörigheter</a></p>
+      <div class="feature-grid">
+        <a class="feature" href="@/tjanster/">
+          <span class="feature-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13 2 4 14h7l-1 8 9-12h-7z"/></svg></span>
+          <h3>El och svagström</h3>
+          <p>Vi utför elinstallationer i bostäder, lokaler och offentliga miljöer – från nya uttag och elcentraler till larm, nätverk och annan svagström. Arbetet görs med aktuellt material och modern teknik.</p>
+          <span class="link">Våra tjänster</span>
+        </a>
+        <a class="feature" href="@/tjanster/badrumsrenovering/">
+          <span class="feature-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.5s-6.5 7.2-6.5 12a6.5 6.5 0 0 0 13 0c0-4.8-6.5-12-6.5-12z"/></svg></span>
+          <h3>Renovering med el på köpet</h3>
+          <p>Vi renoverar badrum och kök med egna elektriker. Våra elektriker har våtrumscertifikat, så el, belysning och golvvärme blir rätt från början – i samma projekt.</p>
+          <span class="link">Badrumsrenovering</span>
+        </a>
+        <a class="feature" href="@/om-oss/behorigheter/">
+          <span class="feature-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2 4 5v6c0 5 3.4 9.4 8 11 4.6-1.6 8-6 8-11V5zm-1.2 14.2-3.5-3.5 1.4-1.4 2.1 2.1 4.6-4.6 1.4 1.4z"/></svg></span>
+          <h3>Behörig elfirma</h3>
+          <p>{COMPANY} är registrerat hos Elsäkerhetsverket med behörigheter för bland annat bostäder, allmänna och offentliga utrymmen, elnät och elproduktionsanläggningar.</p>
+          <span class="link">Behörigheter</span>
+        </a>
       </div>
     </div>
   </section>
@@ -351,7 +359,7 @@ f'''  <section class="hero-image">
     </div>
   </section>
 
-  <section class="split bg-sand">
+  <section class="split split-full bg-sand">
     <div class="split-text">
       <div>
         <h2>Service och entreprenad av högsta kvalité.</h2>
@@ -362,7 +370,7 @@ f'''  <section class="hero-image">
     <div class="split-img"><img src="@/assets/img/elektriker-hjalm.webp" alt="Elektriker i hjälm vid ett elskåp" loading="lazy"></div>
   </section>
 
-  <section class="split split-reverse bg-navy">
+  <section class="split split-full split-reverse bg-navy">
     <div class="split-img"><img src="@/assets/img/natverk-kablar.webp" alt="Nätverkskablar i ett patchskåp" loading="lazy"></div>
     <div class="split-text">
       <div>

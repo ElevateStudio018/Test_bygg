@@ -20,7 +20,7 @@ html { scroll-behavior: smooth; }
 
 body {
   margin: 0;
-  font-family: 'Rethink Sans', system-ui, sans-serif;
+  font-family: 'Poppins', system-ui, -apple-system, 'Segoe UI', sans-serif;
   font-size: clamp(0.95rem, 0.9rem + 0.15vw, 1.05rem);
   line-height: 1.5;
   color: var(--navy);
@@ -426,4 +426,60 @@ a:focus-visible, button:focus-visible { outline: 3px solid var(--primary); outli
 }
 @media (max-width: 1023px) {
   .cards-home .card-img { aspect-ratio: 1; }
+}
+
+/* ---------- Poppins-justeringar ---------- */
+h1, h2, h3, .txt-h1, .txt-h2 { letter-spacing: -0.02em; }
+h1, .txt-h1 { line-height: 1.08; }
+p { line-height: 1.65; }
+.hero-image-content h1 { line-height: 1.08; }
+.wordmark { letter-spacing: 0.12em; }
+
+/* ---------- Header: logga vänster, meny höger ---------- */
+@media (min-width: 1024px) {
+  .site-header .logo { order: -1; margin-right: auto; }
+  .site-header .menu { flex: 0 1 auto; }
+  .menu-list { justify-content: flex-end; gap: 2.25rem; }
+}
+
+/* ---------- Kontaktrutor: ljus hover ---------- */
+.contact-tiles a:hover { background: #fff7d6; color: var(--navy); transform: translateX(4px); box-shadow: 0 6px 20px rgba(17, 36, 61, 0.08); }
+.contact-tiles a { transition: background 0.2s, transform 0.2s, box-shadow 0.2s; }
+
+/* ---------- Därför Ullevi El ---------- */
+.features { padding-block: 4.5rem; }
+.features-head { max-width: 40rem; margin-bottom: 2.5rem; }
+.features-head h2 { margin: 0; text-wrap: balance; }
+.feature-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.25rem; }
+.feature { position: relative; display: flex; flex-direction: column; gap: 0.9rem; padding: 2.25rem 2rem 2rem; background: var(--sand); color: var(--navy); text-decoration: none; border-top: 4px solid transparent; transition: transform 0.25s, box-shadow 0.25s, border-color 0.25s; min-width: 0; }
+.feature:hover { transform: translateY(-6px); box-shadow: 0 18px 40px rgba(17, 36, 61, 0.12); border-top-color: var(--primary); }
+.feature-icon { display: grid; place-items: center; width: 3.25rem; height: 3.25rem; background: var(--navy); }
+.feature-icon svg { width: 1.6rem; height: 1.6rem; fill: var(--primary); }
+.feature h3 { margin: 0.4rem 0 0; }
+.feature p { margin: 0; flex: 1; opacity: 0.85; }
+.feature .link { margin-top: 0.5rem; }
+.feature:hover .link::before { transform: rotate(45deg); }
+
+/* ---------- Fullskärmssektioner ---------- */
+@media (min-width: 768px) {
+  .split-full { min-height: 100vh; min-height: 100svh; }
+  .split-full .split-img { position: relative; }
+  .split-full .split-img img { position: absolute; inset: 0; height: 100%; max-height: none; aspect-ratio: auto; }
+}
+.split-full .split-text { padding-block: 4rem; }
+.split-full .split-text > div { max-width: 34rem; }
+.split-full h2 { font-size: clamp(1.9rem, 1.2rem + 2.2vw, 3.4rem); text-wrap: balance; }
+.split-full .txt-lg { font-size: clamp(1.05rem, 0.95rem + 0.4vw, 1.3rem); }
+
+@media (max-width: 1023px) {
+  .feature-grid { grid-template-columns: 1fr; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .feature:hover, .contact-tiles a:hover { transform: none; }
+}
+
+/* Läsbar text över ljusa bilder */
+.image-block.boxed::after { background: linear-gradient(to top, rgba(10, 22, 38, 0.88), rgba(10, 22, 38, 0.35) 70%, rgba(10, 22, 38, 0.15)); }
+@media (max-width: 767px) {
+  .image-block.boxed::after { background: linear-gradient(to top, rgba(10, 22, 38, 0.92), rgba(10, 22, 38, 0.6) 75%, rgba(10, 22, 38, 0.35)); }
 }
