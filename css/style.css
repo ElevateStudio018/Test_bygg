@@ -324,7 +324,7 @@ body.menu-open .nav-overlay { opacity: 1; visibility: visible; }
 .facts dt { font-weight: 700; }
 .facts dd { margin: 0; }
 
-.faq { max-width: 52rem; }
+.faq > * { max-width: 52rem; }
 .faq details { border-bottom: 1px solid rgba(17, 36, 61, 0.15); }
 .faq summary { cursor: pointer; font-weight: 700; font-size: 1.15em; padding: 1em 2em 1em 0; list-style: none; position: relative; }
 .faq summary::-webkit-details-marker { display: none; }
@@ -339,10 +339,10 @@ body.menu-open .nav-overlay { opacity: 1; visibility: visible; }
 .area-list li { background: var(--sand); padding: 0.6em 1.1em; font-weight: 700; }
 
 .cta-band { padding-block: 3rem; }
-.cta-inner { max-width: 62rem; }
+.cta-inner > * { max-width: 62rem; }
 .cta-band h2 { margin-bottom: 0.3em; }
 
-.prose { max-width: 50rem; }
+.prose > * { max-width: 50rem; }
 .prose h2 { font-size: clamp(1.3rem, 1.1rem + 0.8vw, 1.8rem); margin-top: 1.5em; }
 
 /* ---------- Kontakt ---------- */
